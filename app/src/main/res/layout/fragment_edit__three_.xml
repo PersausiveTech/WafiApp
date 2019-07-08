@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.75"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wafi_pattern" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="25dp">
+
+
+            <ImageButton
+                android:id="@+id/back3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:padding="20dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/textview1052"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_your_password"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/textview1053"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_password_must_be_6_or_more_ncharacters_long"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/textview1054"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/do_not_use_any_common_npasswords_or_repetition"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:text="Password"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="17sp" />-->
+
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/password_show"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="90dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginLeft="140dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@null"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Show"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textAlignment="gravity"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textAllCaps="false"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="17sp" />&ndash;&gt;-->
+            <!--</LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.40"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/black"
+                    app:hintAnimationEnabled="true"
+                    app:hintTextAppearance="@style/WelcomeErrorAppearance"
+                    app:passwordToggleEnabled="true">
+
+
+                    <com.mobtecnica.wafiapps.customViews.CustomEditText
+                        android:id="@+id/editText1edit3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Password"
+                        android:imeOptions="actionDone"
+                        android:textSize="15sp"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColorHint="@color/black"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextAppearance="@style/WelcomeErrorAppearance" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                android:paddingRight="10dp">
+
+
+                <ImageButton
+                    android:id="@+id/next_page3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="@drawable/next_button"
+                    android:src="@drawable/ic_next_page"
+
+                    android:text=">"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

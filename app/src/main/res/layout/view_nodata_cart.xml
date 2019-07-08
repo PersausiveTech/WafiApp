@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/empty_view"
+    android:gravity="center"
+    android:background="@color/fragment_background"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="250dp"
+        android:orientation="vertical">
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="@string/no_items_in_your_cart"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/explore_and_add_items_in_list"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_start_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/red_btn_login"
+            android:text="@string/start_shopping"
+            android:textColor="@color/pureWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/wafi_pattern"
+        android:scaleType="centerCrop"
+        android:alpha="0.75"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="30dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <ImageButton
+                android:id="@+id/close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/close"
+                android:padding="20dp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomButton
+                android:id="@+id/buttonsmalllogin"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_grey"
+                android:text="@string/log_in"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wafi_logo" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/textView101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp"
+            android:text="@string/welcome_to_wafi"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/textView102"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp"
+            android:text="your local online store"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_horizontal"
+            android:weightSum="1">
+
+            <com.mobtecnica.wafiapps.customViews.CustomButton
+                android:id="@+id/Createaccnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/btn_grey"
+                android:gravity="center"
+                android:text="@string/create_your_account"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite" />
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button_fb_edit_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_horizontal">
+
+
+                <com.mobtecnica.wafiapps.customViews.CustomButton
+                    android:id="@+id/fb_login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.06"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/fb_login_background"
+                    android:drawableLeft="@drawable/face_book_icon"
+                    android:drawablePadding="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="40dp"
+                    android:text="Continue with Facebook"
+                    android:textAllCaps="false"
+                    android:textColor="@color/facebookblue" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|right">
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/textView103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="0.05"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/agree"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

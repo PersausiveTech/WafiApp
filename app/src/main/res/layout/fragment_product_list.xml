@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:clickable="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSubCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@+id/container_selection_buttons" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rvSubCategories" />
+
+    <LinearLayout
+        android:id="@+id/container_selection_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pureWhite"
+        android:clickable="true"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Filters"
+            android:textSize="@dimen/small"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/image"
+            android:visibility="gone"/>
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_filter_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/filter"
+            android:text="@string/filter"
+            android:visibility="visible"
+            android:drawablePadding="5dp"
+            android:textSize="12sp" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_sort_list_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/sort_icon_normal"
+            android:text="@string/sort"
+            android:textSize="@dimen/small" />
+
+        <ToggleButton
+            android:id="@+id/switch_list_grid"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_selector_grid_list"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn="" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/pureWhite"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/rvSubCategories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_products_found" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--login-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="iv_width_logo">100dp</dimen>
+    <dimen name="tv_size_login">16sp</dimen>
+    <dimen name="bt_margin_left_login">25dp</dimen>
+
+    <!--sign up-->
+
+    <!--mobile number-->
+    <dimen name="ll_margin_mobile_number">30dp</dimen>
+    <dimen name="bt_margin_left_mobilenumber">15dp</dimen>
+    <dimen name="bt_margin_top_mobilenumber">40dp</dimen>
+    <dimen name="tv_size_mobilenumber">16sp</dimen>
+
+    <!--otp confirmation-->
+    <dimen name="ll_margin_otp">30dp</dimen>
+    <dimen name="tv_size_otp">16sp</dimen>
+    <dimen name="ll_margin_bottom_otp">20dp</dimen>
+    <dimen name="tv_size_profile">15sp</dimen>
+    <dimen name="tv_good_size_otp">18sp</dimen>
+    <dimen name="ll_width_progressbar">250dp</dimen>
+
+
+    <dimen name="btn_size_mobilenumber">18sp</dimen>
+    <dimen name="oicon_width_list_item">75dp</dimen>
+    <dimen name="icon_height_item_menu">75dp</dimen>
+    <dimen name="layout_margin_item_list">10dp</dimen>
+    <dimen name="tv_margin_bottom_forgot_pass">20dp</dimen>
+    <dimen name="tv_size">20sp</dimen>
+    <dimen name="et_drawable_padding">15dip</dimen>
+    <dimen name="tv_size_forgot_pass">18sp</dimen>
+    <dimen name="iv_grid_deals_of_week">100dp</dimen>
+    <dimen name="civ_list_group">65dp</dimen>
+    <dimen name="tv_height_list_group">65dp</dimen>
+    <dimen name="tv_margin_left">7dp</dimen>
+    <dimen name="cv_width_custom_products">160dp</dimen>
+    <dimen name="cv_height_custom_products">180dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="card_margin">3dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="button_text">16dp</dimen>
+    <dimen name="card_side_padding">5dp</dimen>
+    <dimen name="adress_text">13sp</dimen>
+    <dimen name="button_width_checkout">120dp</dimen>
+    <dimen name="order_detail_text">13sp</dimen>
+
+    <!--Text Sizes-->
+    <dimen name="x_small">9sp</dimen>
+    <dimen name="small">11sp</dimen>
+    <dimen name="medium">13sp</dimen>
+    <dimen name="large">15sp</dimen>
+    <dimen name="x_large">17sp</dimen>
+</resources>

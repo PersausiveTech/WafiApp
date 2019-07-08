@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pureWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom">
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/how_would_you_like_to_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/how_would_you_like_to_pay"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/how_would_you_like_to_pay"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/container_no_payment"
+            android:layout_height="match_parent"
+            android:background="@color/pureWhite"
+            android:layout_above="@+id/ll_bottom">
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:text="@string/no_need_to_pay"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/lightgray_border"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/pureWhite"
+                android:gravity="center|center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/sub_total"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/small" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="BD 00.00 "
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/large"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:visibility="visible">
+                <com.mobtecnica.wafiapps.customViews.CustomButton
+                    android:id="@+id/tv_confirm_order"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="@dimen/button_width_checkout"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/red_btn_login"
+                    android:text="@string/confirm_order_label"
+                    android:textAllCaps="true"
+                    android:textColor="@color/pureWhite"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
+
+

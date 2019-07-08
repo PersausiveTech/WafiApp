@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_checkout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:id="@+id/sv_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom">
+            <!--items..!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/card_side_padding"
+                    android:layout_marginRight="@dimen/card_side_padding"
+                    android:layout_marginTop="@dimen/card_side_padding"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/your_delivery_address"
+                                android:textColor="@color/textColor_dark"
+                                android:textSize="@dimen/small" />
+
+                            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                                android:id="@+id/tv_change_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textColor="@color/com_facebook_blue"
+                                android:textSize="@dimen/small" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#e4e1e1" />
+
+
+                        <!--<com.mobtecnica.wafiapps.customViews.CustomTextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:fontFamily="sans-serif"-->
+                        <!--android:text="Ship to my delivery address"-->
+                        <!--android:textColor="@color/textColor"-->
+                        <!--android:textSize="16sp" />-->
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/x_small" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_shipping_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="30dp"
+                            android:lineSpacingExtra="2dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/small" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/x_small" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_side_padding"
+                    android:layout_marginRight="@dimen/card_side_padding"
+                    android:layout_marginTop="@dimen/card_side_padding"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/your_billing_address"
+                                android:textColor="@color/textColor_dark"
+                                android:textSize="@dimen/small" />
+
+                            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                                android:id="@+id/tv_billing_change_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textColor="@color/com_facebook_blue"
+                                android:textSize="@dimen/small" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#e4e1e1" />
+
+
+                        <!--<com.mobtecnica.wafiapps.customViews.CustomTextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:fontFamily="sans-serif"-->
+                        <!--android:text="My Billing Address"-->
+                        <!--android:textColor="@color/textColor"-->
+                        <!--android:textSize="16sp" />-->
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_billing_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/x_small" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_billing_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="9dp"
+                            android:layout_marginLeft="8dp"
+                            android:lineSpacingExtra="2dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="30dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/small" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_billing_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/x_small" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_side_padding"
+                    android:layout_marginRight="@dimen/card_side_padding"
+                    android:layout_marginTop="@dimen/card_side_padding"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="@dimen/margin10"
+                        android:paddingRight="@dimen/margin10"
+                        android:paddingTop="@dimen/margin10">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/discount_code"
+                            android:textColor="@color/textColor_dark"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="@dimen/medium" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <customViews.CustomTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="@dimen/margin10"
+                                    android:text="@string/applied"
+                                    android:textColor="@color/color_green"
+                                    android:textSize="@dimen/medium" />
+
+                                <ImageView
+                                    android:id="@+id/btn_delete_discount_code"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/margin10"
+                                    android:padding="5dp"
+                                    android:src="@drawable/delete_2" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/container_discount_code_entry"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp">
+
+                                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                                    android:id="@+id/et_discount_coupon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/black_box"
+                                    android:hint="@string/enter_your_coupon_here"
+                                    android:minHeight="40dp"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/medium" />
+
+                                <android.support.v4.widget.Space
+                                    android:layout_width="10dp"
+                                    android:layout_height="match_parent" />
+
+                                <com.mobtecnica.wafiapps.customViews.CustomButton
+                                    android:id="@+id/tv_apply_coupon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".8"
+                                    android:background="@drawable/red_btn_login"
+                                    android:gravity="center"
+                                    android:text="@string/apply"
+                                    android:textColor="@color/pureWhite"
+                                    android:textSize="@dimen/medium" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_side_padding"
+                    android:layout_marginRight="@dimen/card_side_padding"
+                    android:layout_marginTop="@dimen/card_side_padding"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="@dimen/margin10"
+                        android:paddingRight="@dimen/margin10"
+                        android:paddingTop="@dimen/margin10">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/gift_card"
+                            android:textColor="@color/textColor_dark"
+                            android:textSize="@dimen/medium" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <customViews.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/margin10"
+                                android:text="@string/applied"
+                                android:textColor="@color/color_green"
+                                android:textSize="@dimen/medium" />
+
+                            <ImageView
+                                android:id="@+id/btn_delete_gift_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:padding="5dp"
+                                android:src="@drawable/delete_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/container_gift_card_entry"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <com.mobtecnica.wafiapps.customViews.CustomEditText
+                                android:id="@+id/et_gift_coupon"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/black_box"
+                                android:hint="@string/gift_card_code"
+                                android:minHeight="40dp"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/medium" />
+
+                            <android.support.v4.widget.Space
+                                android:layout_width="10dp"
+                                android:layout_height="match_parent" />
+
+                            <com.mobtecnica.wafiapps.customViews.CustomButton
+                                android:id="@+id/tv_apply_gift_card"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".8"
+                                android:background="@drawable/red_btn_login"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/apply"
+                                android:textColor="@color/pureWhite"
+                                android:textSize="@dimen/medium" />
+                        </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/otherCharges"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--app:cardElevation="2dp">-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/card_layout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:padding="10dp">-->
+
+                <!--</LinearLayout>-->
+                <!--</android.support.v7.widget.CardView>-->
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_side_padding"
+                    android:layout_marginLeft="@dimen/card_side_padding"
+                    android:layout_marginRight="@dimen/card_side_padding"
+                    android:layout_marginTop="@dimen/card_side_padding"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp">
+
+                        <CheckBox
+                            android:id="@+id/disclaimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:checked="true"
+                            />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/checkbox_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/terms_and_condition"
+                            android:textSize="@dimen/small" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/lightgray_border"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/lightgray_border"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pureWhite"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:text="@string/sub_total"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/small" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_total_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BD 00.00 "
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/large"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/show_price"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:paddingLeft="5dp"
+                            android:src="@drawable/info_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/pureWhite"
+                    android:gravity="right">
+
+                    <com.mobtecnica.wafiapps.customViews.CustomButton
+                        android:id="@+id/next_payment_gateway"
+                        android:layout_width="@dimen/button_width_checkout"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="13dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/red_btn_login"
+                        android:padding="10dp"
+                        android:text="@string/next"
+                        android:textColor="@color/pureWhite"
+                        android:textSize="@dimen/medium"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="1dp">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:background="@drawable/lightgray_border"
+            android:orientation="vertical"
+            android:padding="1dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_item_category"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                 />
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/tv_category_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingRight="2dp"
+                android:paddingLeft="2dp"
+                android:gravity="center"
+                android:lines="2"
+                android:maxLines="2"
+                android:text="Item Name"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

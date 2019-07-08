@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:id="@+id/filter_value_layout"
+    >
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_gravity="center"
+        android:scaleX=".5"
+        android:duplicateParentState="true"
+        android:scaleY=".5"
+        android:background="@drawable/filtercheckbox"/>
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:id="@+id/filter_value_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gqfdwetyf"
+        android:textColor="@drawable/text_selector"
+        android:textSize="13sp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+ <!--   <GridView
+        android:id="@+id/gridView_offers"
+        android:layout_width="match_parent"
+        android:numColumns="3"
+        android:divider="#f1eeee"
+
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        ></GridView>-->
+    <com.etsy.android.grid.StaggeredGridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridView_offers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:column_count="3" />
+</LinearLayout>

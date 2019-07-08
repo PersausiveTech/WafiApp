@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:minHeight="250dp"
+        android:visibility="gone"
+        android:id="@+id/ll_no_data"
+        android:orientation="vertical">
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="No Items in this List!"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/large"
+            android:textStyle="normal" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Explore and Add Items in List"
+            android:textSize="@dimen/medium"
+            android:textStyle="normal" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_start_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/red_btn_login"
+            android:fontFamily="sans-serif"
+            android:text="@string/start_shopping"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/large" />
+    </LinearLayout>
+</RelativeLayout>

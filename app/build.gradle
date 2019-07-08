@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('D:/Namrata Android/WafiApps/app/keystore/WafiAppsKeyStore')
+            keyAlias 'WafiApps'
+            keyPassword 'W@fi2018'
+            storePassword 'W@fi2018'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.mobtecnica.wafiapps"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 24
+        versionName "2.1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        release {
+            minifyEnabled false
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    flavorDimensions 'tier'
+    productFlavors {
+        workingOn {
+            applicationId "ipftech.wafiapps"
+            dimension 'tier'
+            versionName "2.1.0"
+            versionCode 119
+        }
+        current {
+            applicationId "com.mobtecnica.wafiapps"
+            dimension 'tier'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    configurations {
+        all*.exclude module: 'okhttp'
+        all*.exclude module: 'okio'
+    }
+}
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation('cn.trinea.android.view.autoscrollviewpager:android-auto-scroll-view-pager:1.1.2') {
+        exclude module: 'support-v4'
+    }
+    implementation project(':PayTabs_SDK')
+    implementation 'com.android.support:multidex:1.0.3'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:customtabs:28.+'
+    implementation 'com.android.support:animated-vector-drawable:28.+'
+    implementation 'com.android.support:design:28.+'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.hbb20:ccp:1.7.1'
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+    implementation 'com.google.firebase:firebase-config:16.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:5.0.1'
+    implementation 'com.android.support:cardview-v7:28.+'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.android.support:support-v4:28.+'
+    implementation 'it.neokree:MaterialTabs:0.11'
+    //    implementation 'com.github.fccaikai:BottomMenuTutorial:1.0.2'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.github.chenupt.android:springindicator:1.0.2@aar'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'com.etsy.android.grid:library:1.0.5'
+    implementation 'com.github.paolorotolo:appintro:4.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation('com.mikepenz:materialdrawer:5.9.5@aar') {
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    testImplementation 'junit:junit:4.12'
+    implementation project(':bottomlib')
+    implementation 'com.mastercard.gateway:gateway-android:1.1.1'
+    /*implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.92'*/
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.zoho.salesiq:mobilisten:1.4'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+//    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:layout_marginLeft="@dimen/margin10"
+        android:orientation="horizontal">
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="12sp" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_qty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="12sp" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_service"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="12sp" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

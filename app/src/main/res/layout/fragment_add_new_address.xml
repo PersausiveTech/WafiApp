@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#ffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="14dp"
+            android:orientation="vertical">
+
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:text="Enter Address"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomEditText
+                android:id="@+id/et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/black_box"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:fontFamily="sans-serif"
+                android:hint="First name"
+                android:inputType="textPersonName"
+                android:minHeight="40dp"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomEditText
+                android:id="@+id/et_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/black_box"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:fontFamily="sans-serif"
+                android:hint="Last name"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:minHeight="40dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/black_box"
+                android:fontFamily="sans-serif"
+                android:imeOptions="actionNext"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="40dp"
+
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/black_box"
+                android:minHeight="40dp"
+                android:visibility="visible"
+                app:hintText="Select your Country"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp_mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/black_box"
+                    android:gravity="center"
+                    app:defaultCode="973"
+                    android:minHeight="40dp"
+                    android:textColor="@color/textColor"
+                    app:hideNameCode="true"
+                    app:keyboardAutoPopOnSearch="false"
+                    app:showFlag="false"></com.hbb20.CountryCodePicker>
+
+                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="2dp"
+                    android:nextFocusDown="@id/et_flat_number"
+                    android:background="@drawable/black_box"
+                    android:digits="0123456789"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="actionNext"
+                    android:hint="Mobile number"
+                    android:inputType="phone"
+                    android:maxLength="13"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.1">
+
+                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                    android:id="@+id/et_flat_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_box"
+                    android:fontFamily="sans-serif"
+                    android:hint="Flat No:"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:nextFocusDown="@id/et_building_num"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+
+                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                    android:id="@+id/et_building_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_box"
+                    android:fontFamily="sans-serif"
+                    android:hint="Building No"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/et_road_num"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                    android:id="@+id/et_road_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_box"
+                    android:fontFamily="sans-serif"
+                    android:hint="Road No"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/textColor"
+                    android:nextFocusDown="@+id/et_block_num"
+                    android:textSize="14sp" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+
+                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                    android:id="@+id/et_block_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_box"
+                    android:fontFamily="sans-serif"
+                    android:hint="Block No"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:nextFocusDown="@+id/et_area_name"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <com.mobtecnica.wafiapps.customViews.CustomEditText
+                android:id="@+id/et_area_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/black_box"
+                android:fontFamily="sans-serif"
+                android:hint="Area Name"
+                android:minHeight="40dp"
+                android:paddingLeft="10dp"
+                android:nextFocusDown="@+id/et_nearest_land_mark"
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomEditText
+                android:id="@+id/et_nearest_land_mark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/black_box"
+                android:fontFamily="sans-serif"
+                android:hint="Nearest landmark(Optional)"
+                android:minHeight="55dp"
+                android:paddingLeft="10dp"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
+
+            <com.mobtecnica.wafiapps.customViews.CustomButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:background="@drawable/red_btn_login"
+                android:paddingRight="25dp"
+                android:text="ADD ADDRESS"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

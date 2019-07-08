@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/pureWhite"
+    android:clickable="true"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/pureWhite"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_top_itemlist"></include>
+
+            <com.mobtecnica.wafiapps.customViews.NonScrollExpandableListView
+                android:id="@+id/expandableListView_laundry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/pureWhite"
+                android:dividerHeight="0.3dp"
+                android:groupIndicator="@null" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

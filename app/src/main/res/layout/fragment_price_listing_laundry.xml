@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radio_group_servicetype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/laundryAppBar"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin10">
+
+                <RadioButton
+                    android:id="@+id/tv_standard_service"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/pricelist"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:minHeight="40dp"
+                    android:textSize="@dimen/medium"
+                    android:text="Standard Service"
+                    android:textAllCaps="true" />
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/tv_premium_service"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/pricelist"-->
+                    <!--android:button="@android:color/transparent"-->
+                    <!--android:gravity="center"-->
+                    <!--android:minHeight="40dp"-->
+                    <!--android:text="Premium service"-->
+                    <!--android:textAllCaps="true"-->
+
+                    <!--/>-->
+            </RadioGroup>
+            <!--TODO:-->
+
+            <!--  <TextView
+                  android:id="@+id/tv_standard_service"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="5dp"
+                  android:layout_weight="1"
+                  android:background="#fff"
+                  android:gravity="center"
+                  android:minHeight="40dp"
+                  android:textAllCaps="true"
+                  android:textColor="@color/textColor"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/tv_premium_service"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="5dp"
+                  android:layout_weight="1"
+                  android:background="@color/laundryAppBar"
+                  android:gravity="center"
+                  android:textAllCaps="true"
+                  android:textColor="#fff"
+                  android:textStyle="bold" />-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/ll_top">
+
+        <LinearLayout
+            android:id="@+id/price_list_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radio_group_price"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_mens_wear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/pricelistbuttonbackground"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:textSize="@dimen/medium"
+                android:text="MEN'S WEAR" />
+
+            <RadioButton
+                android:id="@+id/rb_womes_wear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/pricelistbuttonbackground"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:textSize="@dimen/medium"
+                android:text="WOMEN'S WEAR" />
+
+            <RadioButton
+                android:id="@+id/rb_house_hold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/medium"
+                android:background="@drawable/pricelistbuttonbackground"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="HOUSE HOLD" />
+        </RadioGroup>
+
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_mens_wear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/backgroud_select_laundry"
+            android:singleLine="true"
+            android:text="MEN'S WEAR"
+            android:textSize="12sp"
+
+            android:visibility="gone" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_womens_wear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:background="@drawable/backgroud_select_laundry"
+            android:singleLine="true"
+            android:text="WOMEN'S WEAR"
+            android:textSize="12sp"
+
+            android:visibility="gone" />
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/btn_house_hold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/backgroud_select_laundry"
+            android:singleLine="true"
+
+            android:text="House hold"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>

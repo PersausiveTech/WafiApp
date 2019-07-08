@@ -1,0 +1,620 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wafi_pattern"
+    tools:context="com.mobtecnica.wafiapps.fragments.wafi_main.OrderHistoryDetailsFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/container_button"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="8dp"
+            app:cardCornerRadius="2dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/order_id" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/order_date" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/order_total" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_order_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_order_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                             />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_order_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                             />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomButton
+                            android:id="@+id/btn_re_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_reorder_bg"
+                            android:elevation="3dp"
+                            android:text="Reorder"
+                            android:layout_margin="5dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/pureWhite"
+
+                            android:visibility="invisible"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/status" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/payment" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/shipment" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="3dp"
+                    android:weightSum="3">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_order_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_payment_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_shipment_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:weightSum="3">
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_order_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                         />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_payment_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                         />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_shipping_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                      />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="@string/shipment_details"
+            android:textSize="18sp"
+             />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:orientation="vertical">
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shipment_status"
+                        android:textSize="@dimen/order_detail_text"
+                        android:textAllCaps="true" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_shipment_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                         />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expected_delivery"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="@dimen/order_detail_text"
+                        android:textAllCaps="true" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_expected_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                         />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shipment_method"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="@dimen/order_detail_text"
+                        android:textAllCaps="true" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_shipment_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+
+                        android:text="@string/shipment_charges"
+                        android:textSize="@dimen/order_detail_text"
+                        android:textAllCaps="true" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_shipment_charges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tracking_number"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="@dimen/order_detail_text"
+                        android:textAllCaps="true" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_tracking_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_shipping_details_expandable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_red"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="@string/shipping_details"
+            android:textSize="15sp"
+           />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_shipping_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/tv_shipping_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Name"
+                    android:textSize="18sp" />
+
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/tv_shipping_details_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Address" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_billing_details_expandable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_red"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="@string/billing_details"
+            android:textSize="15sp"
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_billing_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/tv_billing_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Name"
+                    android:textSize="18sp" />
+
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/tv_billing_details_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Address" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_items_expandable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_red"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="@string/items"
+            android:textSize="15sp"
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_items_my_order_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="@string/discounts"
+            android:textSize="15sp"
+          />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/coupon_code" />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/gift_card" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_coupon_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textAllCaps="true"
+                           />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_gift_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                           />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_coupon_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="BD 0.000"
+                           />
+
+                        <com.mobtecnica.wafiapps.customViews.CustomTextView
+                            android:id="@+id/tv_gift_card_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="BD 0.000"
+                          />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/container_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@color/pureWhite"
+        android:gravity="right">
+
+        <com.mobtecnica.wafiapps.customViews.CustomButton
+            android:id="@+id/button_re_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_login"
+            android:padding="10dp"
+            android:text="@string/re_order"
+            android:textColor="@color/pureWhite"
+            android:textSize="@dimen/medium"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

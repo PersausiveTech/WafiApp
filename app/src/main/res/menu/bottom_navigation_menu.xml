@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_home"
+        android:title="@string/home"
+        android:icon="@drawable/home"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_categories"
+        android:title="@string/categories"
+        android:icon="@drawable/categories"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_wish_list"
+        android:title="@string/wish_list"
+        android:icon="@drawable/wish_list"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_profile"
+        android:title="@string/profile"
+        android:icon="@drawable/profile"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_help"
+        android:title="@string/help"
+        android:icon="@drawable/contact_us"
+        app:showAsAction="ifRoom"/>
+</menu>

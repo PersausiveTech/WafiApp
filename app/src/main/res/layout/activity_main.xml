@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbarColor">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:id="@+id/ll_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="Home"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/pureWhite"
+                        android:textSize="17sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--<RelativeLayout-->
+                            <!--android:id="@+id/iv_cart_container"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:paddingLeft="5dp"-->
+                            <!--android:visibility="gone"-->
+                            <!--android:paddingRight="5dp">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/iv_cart"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:padding="5dp"-->
+                                <!--android:src="@drawable/ic_shopping_cart_white_24dp" />-->
+
+                            <!--<com.mobtecnica.wafiapps.customViews.CustomTextView-->
+                                <!--android:id="@+id/id_quantity"-->
+                                <!--android:layout_width="20dp"-->
+                                <!--android:layout_height="20dp"-->
+                                <!--android:background="@drawable/round_yellow"-->
+                                <!--android:gravity="center_horizontal"-->
+
+                                <!--android:textColor="@color/pureWhite"-->
+                                <!--android:textSize="8dp"-->
+                                <!--android:textStyle="bold"-->
+                                <!--android:visibility="gone" />-->
+
+
+                        <!--</RelativeLayout>-->
+
+                        <com.mobtecnica.wafiapps.customViews.CustomButtonToolbarRight
+                            android:id="@+id/custom_button_toolbar_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/toolbar_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/rounded_white_background"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible">
+
+                <com.mobtecnica.wafiapps.customViews.CustomEditText
+                    android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="8"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:textSize="@dimen/medium"
+                    android:hint="@string/search_hint_home"
+                    android:imeOptions="actionDone"
+                    android:minHeight="40dp"
+                    android:singleLine="true" />
+
+                <ImageView
+
+                    android:id="@+id/iv_search_items"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@mipmap/search" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/sb_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

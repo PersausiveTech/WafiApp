@@ -1,0 +1,21 @@
+alias : Mobtecnica
+password : mobtec123#
+
+
+
+google
+apps.mobtecnica@gmail.com
+pass : developer@mobtecnica
+
+facebook
+
+apps.mobtecnica@gmail.com
+pass:mobtec123#
+
+twitter
+apps.mobtecnica@gmail.com
+developer@mobtecnica
+
+PlayStore Credentials
+ekouponer@gmail.com
+Jacob@1969

@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "474012798057",
+    "firebase_url": "https://wafiandroid-155805.firebaseio.com",
+    "project_id": "wafiandroid-155805",
+    "storage_bucket": "wafiandroid-155805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474012798057:android:f2d44c5899e43976",
+        "android_client_info": {
+          "package_name": "com.mobtecnica.wafiapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474012798057-ve39gctgsekic8r1eh3j1v39qf9f8q6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobtecnica.wafiapps",
+            "certificate_hash": "69aac7813e395cb5b87536a338a4d25ebb5d6a6a"
+          }
+        },
+        {
+          "client_id": "474012798057-k1ig4k7sov09j4gtb0f1u7g2sshr2vdn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobtecnica.wafiapps",
+            "certificate_hash": "b92ab3d2cc2adf94896d3d3769306210ace754b1"
+          }
+        },
+        {
+          "client_id": "474012798057-tpd4lsmdalifqo8o0aujl7af8ehhmevd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobtecnica.wafiapps",
+            "certificate_hash": "6b11d2e7f5033dd4ef3402b802f3d673a4de85ce"
+          }
+        },
+        {
+          "client_id": "474012798057-abg21gkiaf63tnk82e4pqjetoks1igt8.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "474012798057-nos9qvc5ahd14mu1go0dv30d5fdia2tf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobtecnica.wafiapps",
+            "certificate_hash": "0bc0fbbefd486fb8491b9d8db397e57e55707c7f"
+          }
+        },
+        {
+          "client_id": "474012798057-u9v0i2358mdvj1pfqifrs3cdt63adtsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSO3DIH7DcEPha24Nna4pVQbS9Lcz4m5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474012798057-abg21gkiaf63tnk82e4pqjetoks1igt8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474012798057:android:6d216e8d231c1cc4",
+        "android_client_info": {
+          "package_name": "ipftech.wafiapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474012798057-abg21gkiaf63tnk82e4pqjetoks1igt8.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "474012798057-u9v0i2358mdvj1pfqifrs3cdt63adtsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSO3DIH7DcEPha24Nna4pVQbS9Lcz4m5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

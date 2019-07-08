@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "692032570809",
+    "firebase_url": "https://worldofdebugging.firebaseio.com",
+    "project_id": "worldofdebugging",
+    "storage_bucket": "worldofdebugging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692032570809:android:6d216e8d231c1cc4",
+        "android_client_info": {
+          "package_name": "ipftech.wafiapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692032570809-20i2ummlp3gjmjdq25hlebgor1bt1qa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiy6wqu9T248v65gRCNSXJpxfWQjU6iOg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

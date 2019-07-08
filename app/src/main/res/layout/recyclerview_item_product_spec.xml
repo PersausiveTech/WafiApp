@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="15dp"
+    android:background="@color/pureWhite"
+    android:orientation="vertical">
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="3dp"-->
+        <!--app:cardCornerRadius="2dp"-->
+        <!--app:cardElevation="2dp">-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/pureWhite"
+            android:gravity="center_horizontal">
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:background="@drawable/rond_spec"
+                    android:id="@+id/iv_product_color"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </android.support.v7.widget.CardView>
+
+            <com.mobtecnica.wafiapps.customViews.CustomTextView
+                android:id="@+id/product_attribute_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/pureWhite"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:text="color"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    <!--</android.support.v7.widget.CardView>-->
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_cloth_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite"
+    android:clickable="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="@color/pureWhite"
+        android:clickable="true">
+        <com.mobtecnica.wafiapps.customViews.CustomTextView
+            android:id="@+id/tv_cloth_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin10"
+            android:fontFamily="sans-serif"
+            android:text="shirt(Folding)"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:textAllCaps="true" />
+
+        <ImageView
+            android:id="@+id/iv_cloth_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:scaleType="centerInside" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkGray" />
+
+        <LinearLayout
+            android:id="@+id/ll_washing_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/blue_box"
+                android:minHeight="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Qty"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_minus"
+                    android:layout_width="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="25dp"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/minus_image" />
+
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/et_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="01"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/iv_plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/plus_image" />
+
+
+            </LinearLayout>
+
+            <com.mobtecnica.wafiapps.customViews.CustomButton
+                android:id="@+id/btn_add_to_cart_laundry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:fontFamily="sans-serif"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/pureWhite"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

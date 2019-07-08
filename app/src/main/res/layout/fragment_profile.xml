@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pureWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_icon_list"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="2dp"
+                    android:src="@mipmap/dummy_img"
+                    app:civ_border_color="@color/white" />
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/tv_name_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/name"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/x_large" />
+
+                <com.mobtecnica.wafiapps.customViews.CustomTextView
+                    android:id="@+id/tv_email_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="3dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="Email"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:background="@color/blue_btn_bg_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/textView_address_label"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="Address :"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_address_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:text="TEST "
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/small"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_addnewaddress_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="Add new Address"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_my_orders_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="My Orders"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_update_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="@string/change_password"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_feedback_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="Feedback"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColor"
+
+                        android:textSize="@dimen/tv_size_profile"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_rate_app_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="Rate App"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_contactus_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="Contact us"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/tv_size_profile"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_termsandconditions_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="@string/terms_conditions"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_notifications_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="Notifications"
+                        android:textColor="@color/textColor"
+
+                        android:textSize="@dimen/tv_size_profile"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+                    <com.mobtecnica.wafiapps.customViews.CustomTextView
+                        android:id="@+id/tv_logout_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableTint="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:text="Logout"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".3dp"
+                        android:background="@color/white" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>
